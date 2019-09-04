@@ -1,33 +1,239 @@
+* {
+    margin: 0;
+}
+
+body {
+    background: whitesmoke;
+
+}
+
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
+}
+
+.top-header {
+    padding: 5px;
+/* background-color: #4CAF50; */
+    background-color: #494949;
+    color: #333;
+}
+
+.top-header-title {
+    color: #333;
+    background-color: whitesmoke;
+    text-decoration: none;
+    padding: 10px 20%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form-line {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.form-select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.form-input {
+    width: 50%;
+    padding: 5px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.getAlerts-table {
+    /* width: -moz-available; */
+    /* width: -webkit-fill-available; */
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.getAlerts-table th,
+.getAlerts-div td {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.delete-button {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border: 2px solid #cdcdcd;
+    border-radius: 3px;
+    font-weight: 400;
+    color: #aaa;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.63, 1.75, 0.22, 0.57);
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+.delete-button:hover {
+    border: 2px solid #e03e28;
+    color: #e03e28;
+}
+
+.show-button {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 2px solid #cdcdcd;
+    border-radius: 3px;
+    font-weight: 400;
+    color: #aaa;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.63, 1.75, 0.22, 0.57);
+    text-decoration: none;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+.show-button:hover {
+    border: 2px solid rgb(70, 213, 218);
+    color: rgb(70, 213, 218);
+}
+
+.show-button-link-div {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+}
+
+.myform {
+    margin-top: 20px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+    background-color: #333333;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.myform label,
+.form-btn {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.graph-infos {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #333;
+    padding: 5px 50px;
+    color: #333;
+}
+
+.form-input,
+.form-select {
+    margin-left: 10px;
+}
+
+.form-btn {
+    width: 50%;
+    background-color: #494949;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-btn:hover {
+    background-color: #494949;
+}
+
+
+.graph-btn {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #333333;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.graph-btn:hover {
+    background-color: #4CAF50;
+}
+
+.getAlerts-div {
+    width: auto;
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.getAlerts-table-title {
+    border-bottom: 2px solid #333;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
